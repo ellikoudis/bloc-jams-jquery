@@ -30,6 +30,10 @@
       player.skipTo(event.target.value);
     });
 
+    $('#volume-control input').on('input', function (event) {
+      player.setVolume(event.target.value);
+    });
+
   setInterval( () => {
     if  (player.playState !== 'playing') { return; }
     const currentTime = player.getTime();
@@ -39,7 +43,4 @@
     $('#time-control input').val(percent);
   }, 1000);
 
-  $('#volume-control input').on('input', function (event) {
-    player.setVolume(event.target.value);
-  });
 }
