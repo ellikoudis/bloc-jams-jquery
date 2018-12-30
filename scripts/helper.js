@@ -1,7 +1,6 @@
 class Helper {
 
   playPauseAndUpdate(song){
-
     player.playPause(song);
     let totalTime = null;
     if(song !== undefined){
@@ -13,6 +12,6 @@ class Helper {
     $('#time-control .total-time').text( totalTime );
 
   };
-}
 
+}
 const helper = new Helper();
